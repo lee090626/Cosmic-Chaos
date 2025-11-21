@@ -14,6 +14,7 @@ import { GAME_CONFIG } from './data/gameData';
 import './App.css';
 
 import GameGuide from './components/GameGuide'; // 추가
+import Footer from './components/Footer'; // 추가
 
 function App() {
     const {
@@ -177,6 +178,8 @@ function App() {
             />
 
             <GoldenComet onClick={handleCometClick} />
+
+            <Footer />
         </div>
     );
 }
