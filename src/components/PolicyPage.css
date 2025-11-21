@@ -14,6 +14,26 @@
     padding: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.back-button {
+    background: rgba(79, 195, 247, 0.2);
+    border: 1px solid #4fc3f7;
+    color: #4fc3f7;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(79, 195, 247, 0.3);
+    transform: translateX(-5px);
+    box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3);
 }
 
 .policy-container h1 {

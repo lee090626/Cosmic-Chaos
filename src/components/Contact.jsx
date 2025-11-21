@@ -1,15 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PolicyPage.css';
 
 const Contact = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="policy-page">
             <div className="policy-container">
+                <button className="back-button" onClick={() => navigate('/')}>← 게임으로 돌아가기</button>
                 <h1>문의하기</h1>
 
                 <section>
                     <h2>📧 이메일</h2>
-                    <p><strong>contact@cosmic-clicker.com</strong> (예시 - 실제 이메일로 변경하세요)</p>
+                    <p><strong>hyeongseogi46@gmail.com</strong></p>
                     <p>게임 관련 문의, 버그 리포트, 제안 사항 등을 보내주세요.</p>
                 </section>
 

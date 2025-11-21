@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PolicyPage.css';
 
 const TermsOfService = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="policy-page">
             <div className="policy-container">
+                <button className="back-button" onClick={() => navigate('/')}>← 게임으로 돌아가기</button>
                 <h1>이용약관</h1>
                 <p className="last-updated">최종 수정일: 2025년 11월 21일</p>
 
@@ -75,7 +79,7 @@ const TermsOfService = () => {
                 <section>
                     <h2>10. 문의</h2>
                     <p>이용약관에 대한 문의사항이 있으시면 아래로 연락해주세요:</p>
-                    <p><strong>이메일:</strong> contact@cosmic-clicker.com (예시)</p>
+                    <p><strong>이메일:</strong> hyeongseogi46@gmail.com</p>
                 </section>
             </div>
         </div>
