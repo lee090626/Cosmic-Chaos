@@ -1,0 +1,32 @@
+.golden-comet {
+    position: fixed;
+    z-index: 1500;
+    cursor: pointer;
+    animation: flyAcross 10s linear forwards;
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.8));
+}
+
+.comet-head {
+    font-size: 3rem;
+    transform: rotate(45deg);
+}
+
+@keyframes flyAcross {
+    from {
+        left: -100px;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    to {
+        left: 110%;
+        transform: translateX(0) rotate(10deg);
+    }
+}
+
+.golden-comet:hover {
+    transform: scale(1.2);
+}
+
+.golden-comet:active {
+    transform: scale(0.9);
+}

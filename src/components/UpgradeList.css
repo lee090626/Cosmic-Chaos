@@ -1,0 +1,121 @@
+.upgrade-list-container {
+    padding: var(--spacing-lg);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.upgrades-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+.subsection-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.upgrade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.upgrade-card {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-normal);
+}
+
+.upgrade-card.disabled {
+    opacity: 0.6;
+}
+
+.upgrade-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.5));
+}
+
+.upgrade-info {
+    flex: 1;
+    text-align: center;
+}
+
+.upgrade-name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-nebula-pink);
+}
+
+.upgrade-description {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+.upgrade-button {
+    padding: var(--spacing-sm);
+    background: var(--gradient-accent);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-normal);
+}
+
+.upgrade-button:not(:disabled):hover {
+    background: var(--gradient-primary);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+.upgrade-button:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.upgrade-cost {
+    font-family: var(--font-display);
+}
+
+.purchased-upgrades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.purchased-upgrade {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-nebula-purple);
+}
+
+.purchased-icon {
+    font-size: 1.5rem;
+}
+
+.purchased-name {
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .upgrade-grid {
+        grid-template-columns: 1fr;
+    }
+}

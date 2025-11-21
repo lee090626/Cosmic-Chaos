@@ -1,0 +1,114 @@
+.achievement-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.achievement-modal-content {
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    background: var(--color-space-dark);
+    border: 1px solid var(--color-star-yellow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.achievement-modal-header {
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.achievement-progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-star-yellow);
+    transition: width 0.5s ease;
+}
+
+.achievement-list-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.achievement-item.locked {
+    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.achievement-item.unlocked {
+    background: rgba(251, 191, 36, 0.1);
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.achievement-item-icon {
+    font-size: 2rem;
+}
+
+.achievement-item-info {
+    flex: 1;
+}
+
+.achievement-item-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-star-white);
+    margin-bottom: 0.25rem;
+}
+
+.achievement-item.unlocked .achievement-item-name {
+    color: var(--color-star-yellow);
+}
+
+.achievement-item-desc {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.25rem;
+}
+
+.achievement-reward {
+    font-size: 0.8rem;
+    color: var(--color-nebula-cyan);
+    font-weight: 600;
+}

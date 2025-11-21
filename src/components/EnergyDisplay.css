@@ -1,0 +1,155 @@
+.energy-display-container {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.energy-button {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    overflow: visible;
+    transition: all var(--transition-normal);
+}
+
+.energy-button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-nebula-cyan);
+    box-shadow:
+        0 0 40px rgba(6, 182, 212, 0.4),
+        var(--glass-shadow);
+}
+
+.energy-button:active {
+    transform: scale(0.95);
+}
+
+.energy-orb {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.orb-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.8),
+        0 0 60px rgba(59, 130, 246, 0.6),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: orbPulse 2s ease-in-out infinite;
+}
+
+.orb-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--color-nebula-cyan);
+    opacity: 0.6;
+    animation: ringRotate 4s linear infinite;
+}
+
+.orb-ring-2 {
+    width: 140px;
+    height: 140px;
+    border-color: var(--color-nebula-purple);
+    animation-duration: 6s;
+    animation-direction: reverse;
+}
+
+@keyframes orbPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow:
+            0 0 30px rgba(139, 92, 246, 0.8),
+            0 0 60px rgba(59, 130, 246, 0.6),
+            inset 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow:
+            0 0 40px rgba(139, 92, 246, 1),
+            0 0 80px rgba(59, 130, 246, 0.8),
+            inset 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes ringRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.click-text {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.click-power {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 768px) {
+    .energy-button {
+        width: 250px;
+        height: 250px;
+    }
+
+    .energy-orb {
+        width: 120px;
+        height: 120px;
+    }
+
+    .orb-core {
+        width: 60px;
+        height: 60px;
+    }
+
+    .orb-ring {
+        width: 100px;
+        height: 100px;
+    }
+
+    .orb-ring-2 {
+        width: 120px;
+        height: 120px;
+    }
+}

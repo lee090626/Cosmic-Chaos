@@ -1,0 +1,137 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding-bottom: var(--spacing-xl);
+}
+
+.game-section {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.reset-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 8px;
+    color: #fca5a5;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.reset-button:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.6);
+    color: #fecaca;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Prestige Button Styles */
+.prestige-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--gradient-primary);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all var(--transition-normal);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.prestige-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+/* Achievement Button Styles */
+.achievement-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: rgba(251, 191, 36, 0.2);
+    border: 1px solid rgba(251, 191, 36, 0.5);
+    border-radius: 8px;
+    color: var(--color-star-yellow);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all var(--transition-normal);
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+}
+
+.achievement-button:hover {
+    background: rgba(251, 191, 36, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.4);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prestige-button,
+    .achievement-button,
+    .reset-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Artifact Button Styles */
+.artifact-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: rgba(236, 72, 153, 0.2);
+    border: 1px solid rgba(236, 72, 153, 0.5);
+    border-radius: 8px;
+    color: var(--color-nebula-pink);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all var(--transition-normal);
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.2);
+}
+
+.artifact-button:hover {
+    background: rgba(236, 72, 153, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.4);
+}
+
+@media (max-width: 768px) {
+    .artifact-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
