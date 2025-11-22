@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear()
+
+    useEffect(() => {
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+            console.log("AdSense push error:", e);
+        }
+    }, []);
 
     return (
         <footer className="game-footer">
@@ -30,21 +38,15 @@ const Footer = () => {
                         <li><Link to="/terms">이용약관</Link></li>
                     </ul>
                 </div>
-
-                <div className="footer-section">
-                    <h4>소셜 미디어</h4>
-                    <div className="social-links">
-                        <a href="#" aria-label="Discord" title="Discord">💬</a>
-                        <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
-                        <a href="#" aria-label="GitHub" title="GitHub">💻</a>
-                    </div>
-                </div>
             </div>
 
-            <div className="footer-bottom">
-                <p>이 사이트는 Google AdSense를 사용하여 광고를 제공합니다.</p>
-                <p>게임 데이터는 브라우저의 로컬 스토리지에 저장됩니다.</p>
-            </div>
+            {/* <!-- comic-ads --> */}
+            <ins className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-8319588891960553"
+                data-ad-slot="8184116505"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
         </footer>
     );
 };
